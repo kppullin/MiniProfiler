@@ -13,13 +13,13 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;ASP_NET_MVC3</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CSHARP30</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\MvcMiniProfiler.XML</DocumentationFile>
@@ -128,6 +128,7 @@
     <Compile Include="Data\ProfiledDbTransaction.cs" />
     <Compile Include="Helpers\IStopwatch.cs" />
     <Compile Include="Helpers\SqlMapper.cs" />
+    <Compile Include="Helpers\SqlServerGuidGenerator.cs" />
     <Compile Include="Helpers\StackTraceSnippet.cs" />
     <Compile Include="Helpers\HaackFormatter.cs" />
     <Compile Include="IpAddressProvider.cs">

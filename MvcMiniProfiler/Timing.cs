@@ -5,6 +5,7 @@ using System.Web;
 using System.Runtime.Serialization;
 using System.Web.Script.Serialization;
 using MvcMiniProfiler.Data;
+using MvcMiniProfiler.Helpers;
 
 namespace MvcMiniProfiler
 {
@@ -230,7 +231,7 @@ namespace MvcMiniProfiler
         /// </summary>
         public Timing(MiniProfiler profiler, Timing parent, string name)
         {
-            this.Id = Guid.NewGuid();
+			this.Id = SqlServerGuidGenerator.NewSqlServerGuid();
             Profiler = profiler;
             Profiler.Head = this;
 

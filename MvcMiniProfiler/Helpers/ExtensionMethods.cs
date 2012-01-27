@@ -10,7 +10,7 @@ namespace MvcMiniProfiler.Helpers
     /// <summary>
     /// Common extension methods to use only in this project
     /// </summary>
-    internal static class ExtensionMethods
+    public static class ExtensionMethods
     {
         /// <summary>
         /// Answers true if this String is either null or empty.
@@ -46,7 +46,7 @@ namespace MvcMiniProfiler.Helpers
 			return !ExtensionMethods.IsNullOrWhiteSpace(s);
         }
 
-        internal static string Truncate(this string s, int maxLength)
+        public static string Truncate(this string s, int maxLength)
         {
             return s != null && s.Length > maxLength ? s.Substring(0, maxLength) : s;
         }

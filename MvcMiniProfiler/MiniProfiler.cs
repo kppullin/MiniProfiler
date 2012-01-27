@@ -184,7 +184,7 @@ namespace MvcMiniProfiler
         /// </summary>
         public MiniProfiler(string url, ProfileLevel level = ProfileLevel.Info)
         {
-            Id = Guid.NewGuid();
+			Id = SqlServerGuidGenerator.NewSqlServerGuid();
             Level = level;
             SqlProfiler = new SqlProfiler(this);
             MachineName = Environment.MachineName;

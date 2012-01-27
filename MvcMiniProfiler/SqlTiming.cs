@@ -118,7 +118,7 @@ namespace MvcMiniProfiler
         /// </summary>
         public SqlTiming(DbCommand command, ExecuteType type, MiniProfiler profiler)
         {
-            Id = Guid.NewGuid();
+			Id = SqlServerGuidGenerator.NewSqlServerGuid();
 
             CommandString = AddSpacesToParameters(command.CommandText);
             Parameters = GetCommandParameters(command);
